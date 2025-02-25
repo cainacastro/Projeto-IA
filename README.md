@@ -40,5 +40,5 @@ Caso precise instalar pacotes adicionais, consulte a documentação do Gymnasium
 3. Caso queira renderizar o jogo em tempo real execute o código `avaliar_render.py`, caso queira visualizar a avaliação em forma de gráfico execute `avaliar_grafico.py` 
 
 ## Salvamento e Carregamento do Modelo
-O modelo é salvo periodicamente no diretório `MODEL_DIR` criado no arquivo `config.py`. Para carregar um modelo salvo, basta garantir que o arquivo existe antes de iniciar o treinamento.
+O modelo é salvo periodicamente no diretório `MODEL_DIR` declarado no arquivo `config.py`. Para carregar um modelo salvo, basta garantir que o arquivo existe antes de iniciar o treinamento.
 
