@@ -56,4 +56,4 @@ REWARD_APPROACH_BALL = 0.1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 MODEL_DIR = 'logs'
-MODEL_FILENAME = "dqn_model_1560.pth"
+MODEL_FILENAME = "modelo.pth"
