@@ -30,7 +30,7 @@ def preprocess_frame(frame):
     frame = transform(frame)
     return frame
 
-def select_action(state, epsilon, model, action_size, action_noop_count):
+def select_action(state, epsilon, model, action_size):
     if random.random() < epsilon:
         action = random.randint(0, action_size - 1)
     else:
@@ -75,20 +75,17 @@ for episode in range(NUM_EPISODES):
         
     stacked_state = np.stack(frame_stack, axis=0)
     total_reward = 0
-    action_noop_count = 0
     pontuacao = 0
 
     for t in range(PASSOS_POR_EPISODIO): 
-        action = select_action(stacked_state, EPSILON, policy_net, action_size, action_noop_count)
+        action = select_action(stacked_state, EPSILON, policy_net, action_size)
         next_frame, reward, terminated, truncated, info = env.step(action)
 
-        reward *= 2
-        if t > 400:
-          reward *= 2
+        reward *= MULTIPLICAOR_RECOMPENSA
+        if t > PASSOS_MULT_RECOMPENSA:
+          reward *= MULTIPLICAOR_RECOMPENSA
         if reward > 0:
           pontuacao += 1
-        if action == 0:
-            action_noop_count += 1
         if 'lives' in info:
             current_lives = info['lives']
         if current_lives < prev_lives:
