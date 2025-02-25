@@ -42,3 +42,9 @@ Caso precise instalar pacotes adicionais, consulte a documentação do Gymnasium
 ## Salvamento e Carregamento do Modelo
 O modelo é salvo periodicamente no diretório `MODEL_DIR` declarado no arquivo `config.py`. Para carregar um modelo salvo, basta garantir que o arquivo existe antes de iniciar o treinamento.
 
+## Integrantes
+1. Leandro Santos Lima
+2. Edcarlos dos Santos Ramos
+3. José Freire Falcão Neto
+4. Riquelme Prado Leite
+5. Cainã Castro Aquino
